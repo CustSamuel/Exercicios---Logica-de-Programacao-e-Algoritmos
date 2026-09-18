@@ -1,0 +1,62 @@
+algoritmo "Primeiro Programa"
+
+var
+  renda, emprestimo, parcela, parcela_max, seguro, parcela_final : real
+  qtd_parcelas, idade : inteiro
+
+inicio
+
+  escreval("insira a sua renda mensal: ")
+  leia(renda)
+
+  escreval("Insira a sua idade: ")
+  leia(idade)
+ 
+  escreval("Insira o valor do empréstimo: ")
+  leia(emprestimo)
+
+  escreval("Em quantas parcelas você irá pagar?: ")
+  leia(qtd_parcelas)
+  
+  parcela <- emprestimo / qtd_parcelas
+
+  se renda > 2500 entao
+  parcela_max <- renda * 0.30
+  senao
+  se renda > 2000 entao
+  parcela_max <- renda * 0.20
+  senao
+  se renda > 1500 entao
+  parcela_max <- renda * 0.15
+  fimse
+  fimse
+  fimse
+
+  se idade >= 18 e idade <= 29 entao
+  seguro <- parcela * 0.05
+  senao
+  se idade >= 30 e idade <= 44 entao
+  seguro <- parcela * 0.07
+  senao
+  se idade >= 45 e idade <= 60 entao
+  seguro <- parcela * 0.10
+  senao
+  seguro <- parcela * 0.15
+  fimse
+  fimse
+  fimse
+
+  parcela_final <- parcela + seguro
+
+  se parcela < parcela_max entao
+  Escreval("Empréstimo aprovado!")
+
+  Escreval("")
+
+  Escreval("Valor da parcela: R$", parcela)
+  escreval("Valor do seguro: R$", seguro)
+  senao
+  escreval("Empréstimo reprovado!")
+  fimse
+
+fimalgoritmo
