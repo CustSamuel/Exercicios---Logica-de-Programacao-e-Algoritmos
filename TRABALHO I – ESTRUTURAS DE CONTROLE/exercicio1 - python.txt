@@ -1,0 +1,29 @@
+valor = float(input("Digite o valor da compra: "))
+
+print("")
+
+forma_pgto = int(input("Insira a forma de pagamento: \n [1] - Dinheiro; \n [2] - PIX \n [3] - Cartão de Crédito."))
+
+if forma_pgto == 1:
+  desconto = valor * 0.05
+  valor_final = valor - desconto
+elif forma_pgto == 2:
+  desconto = valor * 0.10
+  valor_final = valor - desconto
+elif forma_pgto == 3:
+  valor_final = valor
+
+print("")
+
+print("===== NOTA FISCAL =====")
+print("Valor bruto: R$", valor)
+
+if forma_pgto == 1:
+  print("Forma de pagamento: Dinheiro")
+elif forma_pgto == 2:
+  print("Forma de pagamento: PIX")
+elif forma_pgto == 3:
+  print("Forma de pagamento: Cartão de Crédito")
+
+print("Desconto aplicado: R$", desconto)
+print("Valor final: R$", valor_final)

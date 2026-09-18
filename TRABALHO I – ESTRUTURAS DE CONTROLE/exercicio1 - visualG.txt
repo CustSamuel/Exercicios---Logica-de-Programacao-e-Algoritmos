@@ -1,0 +1,51 @@
+algoritmo "Exercício 1"
+
+var
+  valor, desconto, valor_final : real
+  forma_pgto : inteiro
+
+inicio
+
+  escreval("Digite o valor da compra: ")
+  leia(valor)
+
+  escreval("")
+
+  escreval("Insira a forma de pagamento:")
+  escreval("[1] - Dinheiro;")
+  escreval("[2] - PIX;")
+  escreval("[3] - Cartão de Crédito.")
+  leia(forma_pgto)
+
+  se forma_pgto = 1 entao
+  desconto <- valor * 0.05
+  valor_final <- valor - desconto
+  fimse
+
+  se forma_pgto = 2 entao
+  desconto <- valor * 0.10
+  valor_final <- valor - desconto
+  fimse
+
+  se forma_pgto = 3 entao
+  valor_final <- valor
+  fimse
+
+  escreval("")
+  escreval("===== Nota Fiscal =====")
+  escreval("Valor bruto: R$", valor)
+
+  se forma_pgto = 1 entao
+  escreval("Forma de pagamento: Dinheiro")
+  senao
+  se forma_pgto = 2 entao
+  escreval("Forma de pagamento: PIX")
+  senao
+  escreval("Forma de pagamento: Cartão de crédito")
+  fimse
+  fimse
+
+  escreval("Desconto aplicado: R$", desconto)
+  escreval("Valor final: R$", valor_final)
+
+fimalgoritmo
