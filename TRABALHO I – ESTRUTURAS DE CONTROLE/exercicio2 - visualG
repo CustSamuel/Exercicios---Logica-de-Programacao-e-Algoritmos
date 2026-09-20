@@ -43,14 +43,18 @@ inicio
   se idade >= 45 e idade <= 60 entao
   seguro <- parcela * 0.10
   senao
+  se idade >= 60 entao
   seguro <- parcela * 0.15
+  senao  
+  seguro <- 0
+  fimse
   fimse
   fimse
   fimse
 
   parcela_final <- parcela + seguro
 
-  se parcela_final <= parcela_max entao
+  se parcela_final <= parcela_max e idade >= 18 entao
   Escreval("Empréstimo aprovado!")
 
   Escreval("")
@@ -59,6 +63,7 @@ inicio
   escreval("Valor do seguro: R$", seguro)
   senao
   escreval("Empréstimo reprovado!")
+  escreval("Você não atende aos requisitos necessários para pedir um empréstimo.")
   fimse
 
 fimalgoritmo
