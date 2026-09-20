@@ -17,6 +17,12 @@ inicio
 
   escreval("Em quantas parcelas você irá pagar?: ")
   leia(qtd_parcelas)
+
+  enquanto qtd_parcelas <= 0 faca
+  escreval("Erro: A quantidade de parcelas deve ser maior que zero!")
+  escreval("Digite novamente a quantidade de parcelas: ")
+  leia(qtd_parcelas)
+  fimenquanto
   
   parcela <- emprestimo / qtd_parcelas
 
@@ -43,7 +49,7 @@ inicio
   se idade >= 45 e idade <= 60 entao
   seguro <- parcela * 0.10
   senao
-  se idade >= 60 entao
+  se idade > 60 entao
   seguro <- parcela * 0.15
   senao  
   seguro <- 0
