@@ -28,6 +28,8 @@ inicio
   senao
   se renda > 1500 entao
   parcela_max <- renda * 0.15
+  senao
+  parcela_max <- 0
   fimse
   fimse
   fimse
