@@ -50,7 +50,7 @@ inicio
 
   parcela_final <- parcela + seguro
 
-  se parcela_final < parcela_max entao
+  se parcela_final <= parcela_max entao
   Escreval("Empréstimo aprovado!")
 
   Escreval("")
