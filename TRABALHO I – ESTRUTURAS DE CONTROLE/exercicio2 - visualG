@@ -65,8 +65,8 @@ inicio
 
   Escreval("")
 
-  Escreval("Valor da parcela: R$", parcela)
-  escreval("Valor do seguro: R$", seguro)
+  Escreval("Valor da parcela: R$", parcela:1:2)
+  escreval("Valor do seguro: R$", seguro:1:2)
   senao
   escreval("Empréstimo reprovado!")
   escreval("Você não atende aos requisitos necessários para pedir um empréstimo.")
